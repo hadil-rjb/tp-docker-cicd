@@ -1,13 +1,13 @@
-name : CI - Test de Base
+name : CI-Test de Base
 on :
   push :
-    branches : [ main ]
+    branches : [main]
   pull_request :
-    branches : [ main ]
+    branches : [main]
 
 jobs :
   hello :
-    runs-on : ubuntu - latest
+    runs-on : ubuntu-latest
     
     steps :
       - name : Afficher un message
