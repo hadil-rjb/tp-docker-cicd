@@ -7,11 +7,12 @@ const PORT = process.env.PORT || 3000; // Port configurable
 
 // Database connection configuration
 const pool = new Pool({
-  host: process.env.DB_HOST || "db",
-  port: process.env.DB_PORT || 5432,
-  user: process.env.DB_USER || "admin",
-  password: process.env.DB_PASSWORD || "secret",
-  database: process.env.DB_NAME || "mydb",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  ssl: { rejectUnauthorized: false }
 });
 
 // MIDDLEWARE CORS : Autorise les requêtes cross-origin
